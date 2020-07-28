@@ -7,6 +7,12 @@ export default function formatNumber(number, option) {
   //
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
-
-  throw new Error('Please delete this line and implement the function');
+  // eslint-disable-next-line no-param-reassign
+  number = number.toFixed(2);
+  // eslint-disable-next-line eqeqeq
+  if (option != undefined && option.currency === true) {
+    return `$ ${number}`;
+  }
+  // eslint-disable-next-line no-new-wrappers
+  return new String(number);
 }
